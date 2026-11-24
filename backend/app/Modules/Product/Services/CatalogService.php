@@ -34,7 +34,7 @@ final readonly class CatalogService
     public function save(array $data): void
     {
         $id = empty($data['id']) ? null : Input::id($data['id']);
-        if ($id) $this->get($id, true);
+        $existing = $id ? $this->get($id, true) : null;
         $name = Input::text($data, 'name', 200, 2);
         $category = $this->products->category(Input::text($data, 'category', 180, 1)) ?? throw new ApiException('Danh mục không tồn tại.');
         $specs = $data['specs'] ?? [];
@@ -42,11 +42,38 @@ final readonly class CatalogService
         foreach ($specs as $spec) if (!is_string($spec) || mb_strlen($spec) > 300) throw new ApiException('Thông số không hợp lệ.');
         if (!is_bool($data['featured'] ?? null)) throw new ApiException('Trạng thái nổi bật không hợp lệ.');
         $image = Input::image($data['image'] ?? '');
+        $images = $data['images'] ?? null;
+        if ($images !== null) {
+            if (!is_array($images) || !array_is_list($images) || count($images) > 12) throw new ApiException('Tối đa 12 ảnh sản phẩm.');
+            $images = array_values(array_unique(array_filter(array_map(Input::image(...),$images))));
+            if ($image !== '' && !in_array($image,$images,true)) throw new ApiException('Ảnh chính phải nằm trong danh sách ảnh.');
+            $image = $image ?: ($images[0] ?? '');
+        }
+        $status = Input::text($data + ['status' => $existing['status'] ?? 'active'], 'status', 20);
+        if (!in_array($status, ['active','hidden','discontinued'],true)) throw new ApiException('Trạng thái không hợp lệ.');
+        $sku = Input::text($data + ['sku' => $existing['sku'] ?? 'TZ-' . strtoupper(bin2hex(random_bytes(6)))], 'sku', 80, 1);
+        $slug = Input::text($data + ['slug' => $existing['slug'] ?? Input::slug($name) . '-' . bin2hex(random_bytes(4))], 'slug', 220, 1);
+        if (!preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D', $slug)) throw new ApiException('Slug chỉ gồm chữ thường, số và dấu gạch ngang.');
         $values = [$category,$name,Input::text($data,'brand',100,1),Money::decimal(Money::minor($data['price'] ?? '')),
-            Money::decimal(Money::minor($data['oldPrice'] ?? '0')),Input::integer($data['stock'] ?? null,0,100000000),implode("\n",$specs),(int)$data['featured']];
+            Money::decimal(Money::minor($data['oldPrice'] ?? '0')),Input::integer($data['stock'] ?? null,0,100000000),implode("\n",$specs),(int)$data['featured'],
+            Input::text($data + ['description' => $existing['description'] ?? ''], 'description', 20000),$status,$sku,$slug];
         $this->pdo->beginTransaction();
-        try { $id = $this->products->save($id,$values); $this->products->image($id,$image,$name); $this->pdo->commit(); }
-        catch (\Throwable $error) { $this->pdo->rollBack(); throw $error; }
+        try { $id = $this->products->save($id,$values); if ($images !== null) $this->products->gallery($id,$images,$image,$name); else $this->products->image($id,$image,$name); $this->pdo->commit(); }
+        catch (\Throwable $error) { $this->pdo->rollBack(); if ($error instanceof \PDOException && ($error->errorInfo[1] ?? 0) === 1062) throw new ApiException('SKU hoặc slug đã tồn tại.',409); throw $error; }
+    }
+    public function categoryListing(array $query): array { return $this->products->categoryListing($query); }
+    public function saveCategory(array $data): void
+    {
+        $status = Input::text($data, 'status', 20, 1);
+        $slug = Input::text($data, 'slug', 180, 1);
+        if (!in_array($status,['active','hidden'],true) || !preg_match('/^[a-z0-9]+(?:-[a-z0-9]+)*$/D',$slug)) throw new ApiException('Trạng thái hoặc slug không hợp lệ.');
+        try { $this->products->saveCategory(empty($data['id']) ? null : Input::id($data['id']), [Input::text($data,'name',150,2),$slug,Input::text($data,'short_name',100),Input::text($data,'detail',255),$status,Input::integer($data['sort_order'] ?? 0,0,100000)]); }
+        catch (\PDOException $e) { if (($e->errorInfo[1] ?? 0) === 1062) throw new ApiException('Slug danh mục đã tồn tại.',409); throw $e; }
+    }
+    public function deleteCategory(int $id): void
+    {
+        try { $this->products->deleteCategory($id); }
+        catch (\PDOException $e) { if (($e->errorInfo[1] ?? 0) === 1451) throw new ApiException('Danh mục đang có sản phẩm hoặc danh mục con. Hãy ẩn thay vì xóa.',409); throw $e; }
     }
     public function delete(int $id): void { $this->get($id,true); $this->products->discontinue($id); }
     public function lock(array $ids): array
@@ -80,7 +107,7 @@ final readonly class CatalogService
     {
         return ['id'=>(string)$row['id'],'name'=>$row['name'],'brand'=>$row['brand'],'category'=>$row['category_slug'],
             'price'=>(string)$row['price'],'oldPrice'=>(string)$row['old_price'],'stock'=>(int)$row['stock'],
-            'image'=>$row['image'] ?? '', 'specs'=>preg_split('/\r?\n/', $row['specifications'] ?? '',-1,PREG_SPLIT_NO_EMPTY),
-            'featured'=>(bool)$row['featured'], 'status'=>$row['status']];
+            'image'=>$row['image'] ?? '', 'images'=>json_decode($row['images'] ?? '[]',true) ?? [], 'specs'=>preg_split('/\r?\n/', $row['specifications'] ?? '',-1,PREG_SPLIT_NO_EMPTY),
+            'featured'=>(bool)$row['featured'], 'status'=>$row['status'],'description'=>$row['description'],'sku'=>$row['sku'],'slug'=>$row['slug']];
     }
 }

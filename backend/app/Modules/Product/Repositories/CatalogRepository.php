@@ -11,7 +11,7 @@ use PDO;
 final readonly class CatalogRepository
 {
     private const FROM = ' FROM products p JOIN categories c ON c.id = p.category_id LEFT JOIN product_images i ON i.product_id = p.id AND i.is_primary = 1';
-    private const SELECT = 'SELECT p.*, c.slug AS category_slug, c.status AS category_status, i.file_path AS image';
+    private const SELECT = 'SELECT p.*, c.slug AS category_slug, c.status AS category_status, i.file_path AS image, (SELECT JSON_ARRAYAGG(pi.file_path) FROM product_images pi WHERE pi.product_id=p.id) AS images';
     public function __construct(private PDO $pdo) {}
 
     public function categories(): array
@@ -20,7 +20,7 @@ final readonly class CatalogRepository
     }
     public function category(string $slug): ?int
     {
-        $statement = $this->pdo->prepare("SELECT id FROM categories WHERE slug = ? AND status = 'active'");
+        $statement = $this->pdo->prepare('SELECT id FROM categories WHERE slug = ?');
         $statement->execute([$slug]);
         return ($id = $statement->fetchColumn()) === false ? null : (int) $id;
     }
@@ -28,10 +28,14 @@ final readonly class CatalogRepository
     {
         $where = $admin ? "p.status <> 'discontinued'" : "p.status = 'active' AND c.status = 'active'";
         $parameters = [];
+        if ($admin && ($status = Input::text($query, 'status', 20)) !== '') {
+            if (!in_array($status, ['active', 'hidden', 'discontinued'], true)) throw new \App\Core\ApiException('Trạng thái không hợp lệ.');
+            $where = 'p.status = ?'; $parameters[] = $status;
+        }
         if (isset($query['favoriteIds'])) {
             $ids = array_values(array_unique(array_map(Input::id(...), $query['favoriteIds'])));
             if ($ids === []) $where .= ' AND 0=1';
-            else { $where .= ' AND p.id IN (' . implode(',', array_fill(0,count($ids),'?')) . ')'; $parameters = $ids; }
+            else { $where .= ' AND p.id IN (' . implode(',', array_fill(0,count($ids),'?')) . ')'; $parameters = [...$parameters,...$ids]; }
         }
         $q = Input::text($query, 'q', 100);
         if ($q !== '') { $where .= " AND (p.name LIKE ? ESCAPE '!' OR p.sku LIKE ? ESCAPE '!' OR p.brand LIKE ? ESCAPE '!')"; $parameters = [...$parameters,...array_fill(0, 3, Page::pattern($q))]; }
@@ -70,19 +74,48 @@ final readonly class CatalogRepository
     public function save(?int $id, array $values): int
     {
         if ($id) {
-            $statement = $this->pdo->prepare('UPDATE products SET category_id=?, name=?, brand=?, price=?, old_price=?, stock=?, specifications=?, featured=? WHERE id=?');
+            $statement = $this->pdo->prepare('UPDATE products SET category_id=?, name=?, brand=?, price=?, old_price=?, stock=?, specifications=?, featured=?, description=?, status=?, sku=?, slug=? WHERE id=?');
             $statement->execute([...$values, $id]);
             return $id;
         }
-        $slug = Input::slug($values[1]) . '-' . bin2hex(random_bytes(4));
-        $statement = $this->pdo->prepare("INSERT INTO products (category_id,name,brand,price,old_price,stock,specifications,featured,description,sku,slug) VALUES (?,?,?,?,?,?,?,?,?,?,?)");
-        $statement->execute([...$values, '', 'TZ-' . strtoupper(bin2hex(random_bytes(6))), $slug]);
+        $statement = $this->pdo->prepare("INSERT INTO products (category_id,name,brand,price,old_price,stock,specifications,featured,description,status,sku,slug) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)");
+        $statement->execute($values);
         return (int) $this->pdo->lastInsertId();
     }
     public function image(int $id, string $path, string $name): void
     {
         $this->pdo->prepare('UPDATE product_images SET is_primary = 0 WHERE product_id = ?')->execute([$id]);
         if ($path !== '') $this->pdo->prepare('INSERT INTO product_images (product_id,file_path,alt_text,is_primary) VALUES (?,?,?,1) ON DUPLICATE KEY UPDATE is_primary=1, alt_text=?')->execute([$id, $path, $name, $name]);
+    }
+
+    public function gallery(int $id, array $paths, string $primary, string $name): void
+    {
+        $this->pdo->prepare('DELETE FROM product_images WHERE product_id=?')->execute([$id]);
+        $insert = $this->pdo->prepare('INSERT INTO product_images (product_id,file_path,alt_text,is_primary,sort_order) VALUES (?,?,?,?,?)');
+        foreach ($paths as $index => $path) $insert->execute([$id,$path,$name,(int)($path === $primary),$index]);
+    }
+
+    public function categoryListing(array $query): array
+    {
+        $pattern = Page::pattern(Input::text($query, 'q', 100));
+        return Page::query($this->pdo, 'SELECT c.*, (SELECT COUNT(*) FROM products p WHERE p.category_id=c.id) AS productCount FROM categories c WHERE c.name LIKE ? ESCAPE \'!\' ORDER BY c.sort_order,c.id',
+            'SELECT COUNT(*) FROM categories c WHERE c.name LIKE ? ESCAPE \'!\'', [$pattern], $query);
+    }
+
+    public function saveCategory(?int $id, array $values): void
+    {
+        if ($id) {
+            $find = $this->pdo->prepare('SELECT id FROM categories WHERE id=?'); $find->execute([$id]);
+            if (!$find->fetchColumn()) throw new \App\Core\ApiException('Không tìm thấy danh mục.', 404);
+            $this->pdo->prepare('UPDATE categories SET name=?,slug=?,short_name=?,detail=?,status=?,sort_order=? WHERE id=?')->execute([...$values,$id]);
+        } else $this->pdo->prepare('INSERT INTO categories (name,slug,short_name,detail,status,sort_order) VALUES (?,?,?,?,?,?)')->execute($values);
+    }
+
+    public function deleteCategory(int $id): void
+    {
+        $statement = $this->pdo->prepare('DELETE FROM categories WHERE id=?');
+        $statement->execute([$id]);
+        if (!$statement->rowCount()) throw new \App\Core\ApiException('Không tìm thấy danh mục.', 404);
     }
     public function discontinue(int $id): void
     {

@@ -61,7 +61,7 @@ function Brand({ light = false }: { light?: boolean }) {
   )
 }
 function Header({ route }: { route: string }) {
-  const { db, user, setAuth, sync } = useShop()
+  const { db, user, sync, setAuth, setRegister, setAuthError } = useShop()
   const [query, setQuery] = useState("")
   const [mobile, setMobile] = useState(false)
   const [categoryMenu, setCategoryMenu] = useState(false)
@@ -116,20 +116,35 @@ function Header({ route }: { route: string }) {
           </Button>
         </form>
         <div className="header-actions">
-          <Button
-            variant="subtle"
-            className="header-account"
-            iconStart={<User size={25} strokeWidth={1.5} />}
-            onClick={() => (user ? go("/account") : setAuth(true))}
-          >
-            <span>
-              <small>{user ? "Xin chào," : "Đăng nhập / Đăng ký"}</small>
-              <strong>
-                {user ? user.name.split(" ").slice(-2).join(" ") : "Tài khoản"}{" "}
-                <ChevronDown size={12} />
-              </strong>
-            </span>
-          </Button>
+          {user ? (
+            <details className="header-user-menu" key={route}
+              onBlur={(event) => {
+                if (!event.currentTarget.contains(event.relatedTarget as Node | null)) event.currentTarget.open = false
+              }}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") {
+                  event.currentTarget.open = false
+                  event.currentTarget.querySelector("summary")?.focus()
+                }
+              }}>
+              <summary aria-label="Menu tài khoản">
+                <User size={25} strokeWidth={1.5} />
+                <span>{user.name.split(" ").slice(-2).join(" ")}</span>
+                <ChevronDown size={14} />
+              </summary>
+              <nav className="header-user-dropdown" aria-label="Tài khoản của bạn">
+                <NavLink to="/account"><Package size={17} /> Đơn hàng của tôi</NavLink>
+                <NavLink to="/account?tab=profile"><User size={17} /> Thông tin cá nhân</NavLink>
+                <NavLink to="/account?tab=favorites"><Heart size={17} /> Sản phẩm yêu thích</NavLink>
+                <button type="button" onClick={() => sync(async () => { await api.logout(); go("/") })}><LogOut size={17} /> Đăng xuất</button>
+              </nav>
+            </details>
+          ) : (
+            <div className="header-auth-links">
+              <button type="button" onClick={() => { setRegister(false); setAuthError(""); setAuth(true) }}>Đăng nhập</button>
+              <button type="button" onClick={() => { setRegister(true); setAuthError(""); setAuth(true) }}>Đăng ký</button>
+            </div>
+          )}
           <span className="header-divider" />
           <Button
             variant="subtle"
@@ -774,7 +789,7 @@ function Shell() {
           <div className="admin-locked">Đang tải trang quản trị...</div>
         }
       >
-        <Admin key={route} />
+        <Admin route={route} />
       </Suspense>
     )
   const path = route.split("?")[0]

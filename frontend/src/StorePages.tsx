@@ -317,6 +317,7 @@ function ProductDetail({ id }: { id: string }) {
         <div className="detail-gallery">
           <Badge label="CHÍNH HÃNG 100%" variant="brand" />
           <ProductImage product={product} />
+          {(product.images?.length ?? 0) > 1 && <div className="cms-gallery">{product.images!.map(path => <a key={path} href={path} target="_blank" rel="noreferrer" aria-label="Xem ảnh sản phẩm"><img src={path} alt={product.name} /></a>)}</div>}
           <p>
             <ShieldCheck size={16} /> Hình ảnh sản phẩm mang tính minh họa
           </p>
@@ -449,7 +450,7 @@ function ProductDetail({ id }: { id: string }) {
         ) : (
           <p className="prose">
             {tab === "description"
-              ? `${product.name} là lựa chọn lý tưởng để nâng cấp trải nghiệm làm việc và giải trí. Sản phẩm được TechZone tuyển chọn với hiệu năng ổn định và khả năng tương thích cao.\n\nHãy liên hệ đội ngũ tư vấn để kiểm tra sự tương thích với cấu hình hiện tại trước khi mua.`
+              ? product.description || "Mô tả sản phẩm đang được cập nhật."
               : "Bảo hành chính hãng 36 tháng theo điều kiện của nhà sản xuất. Hỗ trợ đổi sản phẩm lỗi kỹ thuật trong 7 ngày sau khi kiểm tra.\n\nVui lòng giữ hóa đơn, tem và số serial. Các trường hợp hư hỏng do tác động vật lý, vào nước hoặc tự ý sửa chữa không thuộc phạm vi bảo hành."}
           </p>
         )}
@@ -940,9 +941,21 @@ export function OrderCard({
     </article>
   )
 }
-function Account({ orderId }: { orderId?: string }) {
+function AccountFavorites() {
+  const { db, sync } = useShop()
+  const [page, setPage] = useState(1)
+  const remote = useRemoteList<Product>("products", { favorites: 1, page, perPage: 8 })
+  return <>
+    <Title>Sản phẩm yêu thích</Title>
+    {remote.items.length > 0 ? <div className="product-grid account-favorites-grid">{remote.items.map(product => <ProductCard key={product.id} product={product} liked={api.favorites(db).includes(product.id)} add={() => sync(() => api.addToCart(product.id))} favorite={() => sync(() => api.favorite(product.id))} />)}</div> : !remote.loading && !remote.error && <Empty title="Chưa có sản phẩm yêu thích" body="Nhấn biểu tượng trái tim trên sản phẩm để lưu vào danh sách của bạn." action={<Button onClick={() => go("/products")}>Khám phá sản phẩm</Button>} />}
+    <RemotePager pagination={remote.pagination} onPage={setPage} loading={remote.loading} error={remote.error} />
+  </>
+}
+function Account({ orderId, route }: { orderId?: string; route: string }) {
   const { db, user, sync, act, setAuth, busy } = useShop()
-  const [tab, setTab] = useState("orders")
+  const requestedTab = new URLSearchParams(route.split("?")[1]).get("tab")
+  const tab = route.split("?")[0] === "/favorites" ? "favorites" : requestedTab === "profile" || requestedTab === "favorites" ? requestedTab : "orders"
+  const setTab = (next: string) => { window.location.hash = next === "orders" ? "/account" : `/account?tab=${next}` }
   const [name, setName] = useState(user?.name ?? "")
   const [phone, setPhone] = useState(user?.phone ?? "")
   const [address, setAddress] = useState(user?.address ?? "")
@@ -951,7 +964,7 @@ function Account({ orderId }: { orderId?: string }) {
   const remote = useRemoteList<Order>(
     "orders",
     { page, status: status === "all" ? "" : status },
-    Boolean(user),
+    Boolean(user) && tab === "orders",
   )
   const detail = useRemoteItem<Order>("orders", user ? orderId : undefined)
   if (!user)
@@ -1005,7 +1018,8 @@ function Account({ orderId }: { orderId?: string }) {
           <Button
             variant="subtle"
             iconStart={<Heart size={18} />}
-            onClick={() => go("/favorites")}
+            className={tab === "favorites" ? "selected" : ""}
+            onClick={() => setTab("favorites")}
           >
             Sản phẩm yêu thích
           </Button>
@@ -1074,7 +1088,7 @@ function Account({ orderId }: { orderId?: string }) {
                 />
               )}
             </>
-          ) : (
+          ) : tab === "favorites" ? <AccountFavorites /> : (
             <form
               className="surface form-stack"
               onSubmit={(e) => {
@@ -1124,13 +1138,10 @@ export default function StorePages({ route }: { route: string }) {
   const { user } = useShop()
   const path = route.split("?")[0]
   if (path === "/products") return <Catalog key={route} route={route} />
-  if (path === "/favorites") return <Catalog route={route} favorites />
   if (path.startsWith("/product/"))
     return <ProductDetail key={path} id={path.slice(9)} />
   if (path === "/cart") return <Cart />
   if (path === "/checkout")
     return <Checkout key={user?.id ?? "guest"} route={route} />
-  if (path.startsWith("/order/"))
-    return <Account key={user?.id ?? "guest"} orderId={path.slice(7)} />
-  return <Account key={user?.id ?? "guest"} />
+  return <Account key={user?.id ?? "guest"} route={route} orderId={path.startsWith("/order/") ? path.slice(7) : undefined} />
 }

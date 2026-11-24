@@ -1,0 +1,2 @@
+-- 008_migration.sql
+-- Add forward-only SQL here. Never edit an applied migration.

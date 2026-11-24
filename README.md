@@ -40,6 +40,30 @@ Truy cập **http://localhost:8443/**; trang quản trị tại **http://localho
 
 ## Khởi tạo backend trên máy mới
 
+### MySQL trên Docker Desktop
+
+Mở Docker Desktop (Linux containers). Sửa cấu hình local trong `backend/.env`, giữ mật khẩu riêng của bạn:
+
+```dotenv
+DB_HOST=127.0.0.1
+DB_PORT=13306
+DB_DATABASE=computer_store
+DB_TEST_DATABASE=computer_store_test
+DB_USERNAME=root
+DB_PASSWORD=your_local_password
+```
+
+Chạy từ root (PowerShell, macOS và Linux dùng cùng lệnh Docker):
+
+```sh
+docker compose up -d --wait
+npm run backend:init
+```
+
+Sau đó `./scripts/update.ps1` (Bash: `bash ./scripts/update.sh`) để apply schema và `./scripts/check.ps1` để kiểm tra. Container dùng MySQL 8.4, tạo `computer_store` lần đầu; `backend:init` tạo thêm DB test riêng. Không tự seed hoặc tạo tài khoản. Backend chạy trên host kết nối `127.0.0.1:13306`, không dùng địa chỉ NAS. Compose tự đọc mật khẩu từ `backend/.env`. Nếu port bị chiếm, thêm `MYSQL_PORT=13307` vào `backend/.env`, đổi `DB_PORT=13307` và chạy `docker compose --env-file backend/.env up -d --wait` để áp dụng port tùy chỉnh.
+
+Xem trạng thái: `docker compose ps`. Dừng: `docker compose down`. Dữ liệu nằm trong named volume `mysql_data` và vẫn giữ sau khi dừng container. Các biến khởi tạo MySQL chỉ có tác dụng với volume mới; sửa `DB_PASSWORD` không tự đổi mật khẩu của database đã khởi tạo. MySQL chỉ mở port trên loopback của máy local; mật khẩu không nằm trong compose/source.
+
 Xem [backend/README.md](backend/README.md) cho cấu hình đầy đủ. Trên Windows:
 
 ```sh

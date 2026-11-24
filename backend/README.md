@@ -36,9 +36,21 @@ Máy đã có PHP: cần **fileinfo, mbstring, PDO/PDO MySQL**, chạy `composer
 
 `backend:seed-store` nạp nội dung công khai từ JSON một lần bằng transaction và ledger `data_seeds`; không ghi đè chỉnh sửa sau đó. Seed không tạo tài khoản/đơn hàng. Seed cũ `backend:seed` chỉ thêm ba sản phẩm demo, không cần chạy cho UI mới.
 
+Bộ seed hiện có **100 sản phẩm / 11 danh mục, 5 bài viết và 5 FAQ**, dùng ảnh nội bộ có sẵn. Chạy `npm run backend:seed-store` sau khi migrate và tạo Admin. Ledger `store-content-100-v2` cho phép nâng cấp bộ seed cũ (12 sản phẩm/3 bài viết), giữ SKU/slug cũ, không ghi đè chỉnh sửa và không thêm FAQ trùng câu hỏi. Có khóa chống chạy seed đồng thời. Sản phẩm có nhiều mức giá/tồn kho, gồm hết hàng và sắp hết hàng để thử UI; giá, cấu hình và ảnh minh họa là dữ liệu demo, cần cập nhật trước khi bán thật. Seed không xóa dữ liệu người dùng tự tạo, nên DB đang có dữ liệu riêng có thể có tổng số lớn hơn bộ seed.
+
 Tạo admin bằng `BOOTSTRAP_ADMIN_EMAIL` và `BOOTSTRAP_ADMIN_PASSWORD` (16–72 byte) trong `.env`/shell rồi chạy `backend:create-admin`. Không có HTTP endpoint đăng ký Admin. Lệnh không đổi mật khẩu admin đã tồn tại. Credentials admin đã tạo tại máy này ở file private `.tools/admin-credentials.json` trong root.
 
 ## Frontend và HTTP
+
+### Portal quản trị sản phẩm
+
+Mở `http://localhost:8443/#/admin` bằng tài khoản Admin. Dashboard dùng số liệu thật; sidebar có Sản phẩm và Danh mục. React được giữ theo DB-03; đây chưa phải bản chuyển toàn bộ portal sang PHP Views. Thành phần bảng lấy từ TailAdmin Free (MIT), revision và license lưu tại `frontend/src/tailadmin/`.
+
+Sản phẩm hỗ trợ tìm tên/SKU/thương hiệu, lọc danh mục/trạng thái, phân trang SQL; thêm/sửa mô tả, SKU/slug duy nhất, giá không âm, tồn kho nguyên không âm, nổi bật, trạng thái bán/ẩn/ngừng bán. Upload tối đa 12 ảnh nội bộ, chọn ảnh chính và bỏ ảnh khỏi gallery. Xóa sản phẩm là ngừng bán để giữ lịch sử đơn; chọn bộ lọc Ngừng bán để sửa/khôi phục. File upload đã bỏ khỏi gallery được giữ trong thư viện media.
+
+Danh mục hỗ trợ tìm kiếm/phân trang/thêm/sửa/ẩn/xóa. Không xóa danh mục đang chứa sản phẩm hoặc danh mục con (409); quan hệ cha/con hiện có được giữ, chưa có UI thay đổi phân cấp. API `list/categories`, `admin-category-save`, `admin-category-delete` bắt buộc Admin; các mutation vẫn dùng CSRF. Không cần migration mới.
+
+Smoke test riêng: `.tools/php/php.exe backend/tests/catalog-cms.php` (hoặc `php` 8.3 tương ứng). Chỉ chạy trên DB `_test`, tự dọn fixtures. Bao phủ CRUD, trùng SKU/slug, gallery, ẩn sản phẩm và chặn xóa danh mục đang dùng. Ngày 24/11/2026 smoke test đã pass trên MySQL Docker 8.4.13 / computer_store_test; build/typecheck/PHP lint/unit pass.
 
 Hai terminal chạy `npm run dev:backend` và `npm run dev`. UI **http://localhost:8443/** dùng Fetch cùng origin; Vite proxy tới PHP **127.0.0.1:8000**. Đổi `BACKEND_PORT` và `BACKEND_URL` tương ứng ở hai terminal nếu cần.
 

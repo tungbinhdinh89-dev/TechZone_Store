@@ -45,7 +45,7 @@ final readonly class StoreController
     public function listing(string $resource): Response
     {
         $admin = ($_GET['admin'] ?? '') === '1';
-        if ($admin || in_array($resource,['contacts','users'],true)) $this->app->users->requireAdmin();
+        if ($admin || in_array($resource,['contacts','users','categories'],true)) $this->app->users->requireAdmin();
         return Response::json($this->listData($resource,$_GET,$admin));
     }
 
@@ -72,6 +72,7 @@ final readonly class StoreController
             'contacts'=>$this->app->contacts->listing($query),
             'faqs'=>$this->app->faqs->listing($query,$admin),
             'users'=>$this->users($query),
+            'categories'=>$this->app->catalog->categoryListing($query),
             'orders'=>$this->app->orders->listing($query,$admin),
             'company','services','pricing','settings','media'=>$this->app->site->listing($resource,$query,$admin),
             default=>throw new ApiException('Không tìm thấy dữ liệu.',404),
@@ -129,6 +130,8 @@ final readonly class StoreController
             case 'newsletter':$this->app->contacts->subscribe($data);break;
             case 'admin-product-save':$this->app->catalog->save($data);break;
             case 'admin-product-delete':$this->app->catalog->delete(Input::id($data['id']??null));break;
+            case 'admin-category-save':$this->app->catalog->saveCategory($data);break;
+            case 'admin-category-delete':$this->app->catalog->deleteCategory(Input::id($data['id']??null));break;
             case 'admin-user-toggle':$this->app->users->toggle(Input::id($data['id']??null));break;
             case 'admin-order-status':$this->app->orders->status($data);break;
             case 'admin-shipping':$this->app->site->saveShipping($data);break;

@@ -259,6 +259,1414 @@
       "featured": true,
       "stock": 15,
       "image": "/images/case.webp"
+    },
+    {
+      "id": "seed-cpu-01",
+      "name": "Intel Core i3-12100F",
+      "brand": "Intel",
+      "category": "cpu",
+      "price": 2200000,
+      "oldPrice": 2500000,
+      "stock": 10,
+      "image": "/images/cpu-intel.webp",
+      "specs": [
+        "CPU - Bộ vi xử lý",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "Intel Core i3-12100F thuộc nhóm CPU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cpu-02",
+      "name": "Intel Core i3-13100F",
+      "brand": "Intel",
+      "category": "cpu",
+      "price": 2700000,
+      "oldPrice": 2700000,
+      "stock": 14,
+      "image": "/images/cpu-intel.webp",
+      "specs": [
+        "CPU - Bộ vi xử lý",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Intel Core i3-13100F thuộc nhóm CPU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cpu-03",
+      "name": "Intel Core i5-12400F",
+      "brand": "Intel",
+      "category": "cpu",
+      "price": 3200000,
+      "oldPrice": 3200000,
+      "stock": 18,
+      "image": "/images/cpu-intel.webp",
+      "specs": [
+        "CPU - Bộ vi xử lý",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Intel Core i5-12400F thuộc nhóm CPU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cpu-04",
+      "name": "Intel Core i5-13400F",
+      "brand": "Intel",
+      "category": "cpu",
+      "price": 3700000,
+      "oldPrice": 4000000,
+      "stock": 22,
+      "image": "/images/cpu-intel.webp",
+      "specs": [
+        "CPU - Bộ vi xử lý",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Intel Core i5-13400F thuộc nhóm CPU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cpu-05",
+      "name": "Intel Core i7-13700F",
+      "brand": "Intel",
+      "category": "cpu",
+      "price": 4200000,
+      "oldPrice": 4200000,
+      "stock": 26,
+      "image": "/images/cpu-intel.webp",
+      "specs": [
+        "CPU - Bộ vi xử lý",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Intel Core i7-13700F thuộc nhóm CPU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cpu-06",
+      "name": "AMD Ryzen 5 5600",
+      "brand": "AMD",
+      "category": "cpu",
+      "price": 4700000,
+      "oldPrice": 4700000,
+      "stock": 30,
+      "image": "/images/cpu-intel.webp",
+      "specs": [
+        "CPU - Bộ vi xử lý",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "AMD Ryzen 5 5600 thuộc nhóm CPU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cpu-07",
+      "name": "AMD Ryzen 5 7600",
+      "brand": "AMD",
+      "category": "cpu",
+      "price": 5200000,
+      "oldPrice": 5500000,
+      "stock": 3,
+      "image": "/images/cpu-intel.webp",
+      "specs": [
+        "CPU - Bộ vi xử lý",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "AMD Ryzen 5 7600 thuộc nhóm CPU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cpu-08",
+      "name": "AMD Ryzen 7 7700",
+      "brand": "AMD",
+      "category": "cpu",
+      "price": 5700000,
+      "oldPrice": 5700000,
+      "stock": 0,
+      "image": "/images/cpu-intel.webp",
+      "specs": [
+        "CPU - Bộ vi xử lý",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "AMD Ryzen 7 7700 thuộc nhóm CPU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-mainboard-01",
+      "name": "ASUS PRIME H610M-K D4",
+      "brand": "ASUS",
+      "category": "mainboard",
+      "price": 1800000,
+      "oldPrice": 2100000,
+      "stock": 10,
+      "image": "/images/main-msi.webp",
+      "specs": [
+        "Mainboard - Bo mạch chủ",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "ASUS PRIME H610M-K D4 thuộc nhóm Mainboard.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-mainboard-02",
+      "name": "ASUS TUF GAMING B760M-PLUS WIFI",
+      "brand": "ASUS",
+      "category": "mainboard",
+      "price": 2150000,
+      "oldPrice": 2150000,
+      "stock": 14,
+      "image": "/images/main-msi.webp",
+      "specs": [
+        "Mainboard - Bo mạch chủ",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "ASUS TUF GAMING B760M-PLUS WIFI thuộc nhóm Mainboard.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-mainboard-03",
+      "name": "MSI PRO H610M-E DDR4",
+      "brand": "MSI",
+      "category": "mainboard",
+      "price": 2500000,
+      "oldPrice": 2500000,
+      "stock": 18,
+      "image": "/images/main-msi.webp",
+      "specs": [
+        "Mainboard - Bo mạch chủ",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "MSI PRO H610M-E DDR4 thuộc nhóm Mainboard.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-mainboard-04",
+      "name": "MSI MAG B650 TOMAHAWK WIFI",
+      "brand": "MSI",
+      "category": "mainboard",
+      "price": 2850000,
+      "oldPrice": 3150000,
+      "stock": 22,
+      "image": "/images/main-msi.webp",
+      "specs": [
+        "Mainboard - Bo mạch chủ",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "MSI MAG B650 TOMAHAWK WIFI thuộc nhóm Mainboard.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-mainboard-05",
+      "name": "Gigabyte B760M DS3H DDR4",
+      "brand": "Gigabyte",
+      "category": "mainboard",
+      "price": 3200000,
+      "oldPrice": 3200000,
+      "stock": 26,
+      "image": "/images/main-msi.webp",
+      "specs": [
+        "Mainboard - Bo mạch chủ",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Gigabyte B760M DS3H DDR4 thuộc nhóm Mainboard.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-mainboard-06",
+      "name": "Gigabyte B650 AORUS ELITE AX",
+      "brand": "Gigabyte",
+      "category": "mainboard",
+      "price": 3550000,
+      "oldPrice": 3550000,
+      "stock": 30,
+      "image": "/images/main-msi.webp",
+      "specs": [
+        "Mainboard - Bo mạch chủ",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Gigabyte B650 AORUS ELITE AX thuộc nhóm Mainboard.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-mainboard-07",
+      "name": "ASRock B550M Pro4",
+      "brand": "ASRock",
+      "category": "mainboard",
+      "price": 3900000,
+      "oldPrice": 4200000,
+      "stock": 3,
+      "image": "/images/main-msi.webp",
+      "specs": [
+        "Mainboard - Bo mạch chủ",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "ASRock B550M Pro4 thuộc nhóm Mainboard.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-mainboard-08",
+      "name": "ASRock B650M Pro RS",
+      "brand": "ASRock",
+      "category": "mainboard",
+      "price": 4250000,
+      "oldPrice": 4250000,
+      "stock": 0,
+      "image": "/images/main-msi.webp",
+      "specs": [
+        "Mainboard - Bo mạch chủ",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "ASRock B650M Pro RS thuộc nhóm Mainboard.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-gpu-01",
+      "name": "ASUS Dual GeForce RTX 3050",
+      "brand": "ASUS",
+      "category": "gpu",
+      "price": 4500000,
+      "oldPrice": 4800000,
+      "stock": 10,
+      "image": "/images/gpu-asus.webp",
+      "specs": [
+        "VGA - Card màn hình",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "ASUS Dual GeForce RTX 3050 thuộc nhóm Card màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-gpu-02",
+      "name": "ASUS TUF Gaming GeForce RTX 4070",
+      "brand": "ASUS",
+      "category": "gpu",
+      "price": 5700000,
+      "oldPrice": 5700000,
+      "stock": 14,
+      "image": "/images/gpu-asus.webp",
+      "specs": [
+        "VGA - Card màn hình",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "ASUS TUF Gaming GeForce RTX 4070 thuộc nhóm Card màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-gpu-03",
+      "name": "MSI GeForce RTX 4060 VENTUS 2X",
+      "brand": "MSI",
+      "category": "gpu",
+      "price": 6900000,
+      "oldPrice": 6900000,
+      "stock": 18,
+      "image": "/images/gpu-asus.webp",
+      "specs": [
+        "VGA - Card màn hình",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "MSI GeForce RTX 4060 VENTUS 2X thuộc nhóm Card màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-gpu-04",
+      "name": "MSI GeForce RTX 4070 SUPER VENTUS 2X",
+      "brand": "MSI",
+      "category": "gpu",
+      "price": 8100000,
+      "oldPrice": 8400000,
+      "stock": 22,
+      "image": "/images/gpu-asus.webp",
+      "specs": [
+        "VGA - Card màn hình",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "MSI GeForce RTX 4070 SUPER VENTUS 2X thuộc nhóm Card màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-gpu-05",
+      "name": "Gigabyte GeForce RTX 4060 EAGLE OC",
+      "brand": "Gigabyte",
+      "category": "gpu",
+      "price": 9300000,
+      "oldPrice": 9300000,
+      "stock": 26,
+      "image": "/images/gpu-asus.webp",
+      "specs": [
+        "VGA - Card màn hình",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Gigabyte GeForce RTX 4060 EAGLE OC thuộc nhóm Card màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-gpu-06",
+      "name": "Gigabyte GeForce RTX 4070 WINDFORCE OC",
+      "brand": "Gigabyte",
+      "category": "gpu",
+      "price": 10500000,
+      "oldPrice": 10500000,
+      "stock": 30,
+      "image": "/images/gpu-asus.webp",
+      "specs": [
+        "VGA - Card màn hình",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Gigabyte GeForce RTX 4070 WINDFORCE OC thuộc nhóm Card màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-gpu-07",
+      "name": "Sapphire PULSE Radeon RX 7600",
+      "brand": "Sapphire",
+      "category": "gpu",
+      "price": 11700000,
+      "oldPrice": 12000000,
+      "stock": 3,
+      "image": "/images/gpu-asus.webp",
+      "specs": [
+        "VGA - Card màn hình",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Sapphire PULSE Radeon RX 7600 thuộc nhóm Card màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-gpu-08",
+      "name": "Sapphire PULSE Radeon RX 7800 XT",
+      "brand": "Sapphire",
+      "category": "gpu",
+      "price": 12900000,
+      "oldPrice": 12900000,
+      "stock": 0,
+      "image": "/images/gpu-asus.webp",
+      "specs": [
+        "VGA - Card màn hình",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Sapphire PULSE Radeon RX 7800 XT thuộc nhóm Card màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ram-01",
+      "name": "Corsair Vengeance LPX 16GB DDR4",
+      "brand": "Corsair",
+      "category": "ram",
+      "price": 790000,
+      "oldPrice": 1090000,
+      "stock": 10,
+      "image": "/images/ram-corsair.webp",
+      "specs": [
+        "RAM - Bộ nhớ trong",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "Corsair Vengeance LPX 16GB DDR4 thuộc nhóm RAM.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ram-02",
+      "name": "Corsair Vengeance LPX 32GB DDR4",
+      "brand": "Corsair",
+      "category": "ram",
+      "price": 1040000,
+      "oldPrice": 1040000,
+      "stock": 14,
+      "image": "/images/ram-corsair.webp",
+      "specs": [
+        "RAM - Bộ nhớ trong",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Corsair Vengeance LPX 32GB DDR4 thuộc nhóm RAM.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ram-03",
+      "name": "Kingston FURY Beast 16GB DDR4",
+      "brand": "Kingston",
+      "category": "ram",
+      "price": 1290000,
+      "oldPrice": 1290000,
+      "stock": 18,
+      "image": "/images/ram-corsair.webp",
+      "specs": [
+        "RAM - Bộ nhớ trong",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Kingston FURY Beast 16GB DDR4 thuộc nhóm RAM.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ram-04",
+      "name": "Kingston FURY Beast 32GB DDR5",
+      "brand": "Kingston",
+      "category": "ram",
+      "price": 1540000,
+      "oldPrice": 1840000,
+      "stock": 22,
+      "image": "/images/ram-corsair.webp",
+      "specs": [
+        "RAM - Bộ nhớ trong",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Kingston FURY Beast 32GB DDR5 thuộc nhóm RAM.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ram-05",
+      "name": "G.Skill Ripjaws V 16GB DDR4",
+      "brand": "G.Skill",
+      "category": "ram",
+      "price": 1790000,
+      "oldPrice": 1790000,
+      "stock": 26,
+      "image": "/images/ram-corsair.webp",
+      "specs": [
+        "RAM - Bộ nhớ trong",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "G.Skill Ripjaws V 16GB DDR4 thuộc nhóm RAM.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ram-06",
+      "name": "G.Skill Trident Z5 RGB 32GB DDR5",
+      "brand": "G.Skill",
+      "category": "ram",
+      "price": 2040000,
+      "oldPrice": 2040000,
+      "stock": 30,
+      "image": "/images/ram-corsair.webp",
+      "specs": [
+        "RAM - Bộ nhớ trong",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "G.Skill Trident Z5 RGB 32GB DDR5 thuộc nhóm RAM.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ram-07",
+      "name": "TeamGroup T-Force Delta RGB 32GB DDR4",
+      "brand": "TeamGroup",
+      "category": "ram",
+      "price": 2290000,
+      "oldPrice": 2590000,
+      "stock": 3,
+      "image": "/images/ram-corsair.webp",
+      "specs": [
+        "RAM - Bộ nhớ trong",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "TeamGroup T-Force Delta RGB 32GB DDR4 thuộc nhóm RAM.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ram-08",
+      "name": "ADATA XPG Lancer RGB 32GB DDR5",
+      "brand": "ADATA",
+      "category": "ram",
+      "price": 2540000,
+      "oldPrice": 2540000,
+      "stock": 0,
+      "image": "/images/ram-corsair.webp",
+      "specs": [
+        "RAM - Bộ nhớ trong",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "ADATA XPG Lancer RGB 32GB DDR5 thuộc nhóm RAM.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ssd-01",
+      "name": "Samsung 970 EVO Plus 500GB",
+      "brand": "Samsung",
+      "category": "ssd",
+      "price": 690000,
+      "oldPrice": 990000,
+      "stock": 10,
+      "image": "/images/ssd-samsung.webp",
+      "specs": [
+        "SSD / HDD - Ổ cứng",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "Samsung 970 EVO Plus 500GB thuộc nhóm SSD / HDD.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ssd-02",
+      "name": "Samsung 980 1TB",
+      "brand": "Samsung",
+      "category": "ssd",
+      "price": 1040000,
+      "oldPrice": 1040000,
+      "stock": 14,
+      "image": "/images/ssd-samsung.webp",
+      "specs": [
+        "SSD / HDD - Ổ cứng",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Samsung 980 1TB thuộc nhóm SSD / HDD.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ssd-03",
+      "name": "Samsung 990 PRO 2TB",
+      "brand": "Samsung",
+      "category": "ssd",
+      "price": 1390000,
+      "oldPrice": 1390000,
+      "stock": 18,
+      "image": "/images/ssd-samsung.webp",
+      "specs": [
+        "SSD / HDD - Ổ cứng",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Samsung 990 PRO 2TB thuộc nhóm SSD / HDD.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ssd-04",
+      "name": "Kingston NV2 500GB",
+      "brand": "Kingston",
+      "category": "ssd",
+      "price": 1740000,
+      "oldPrice": 2040000,
+      "stock": 22,
+      "image": "/images/ssd-samsung.webp",
+      "specs": [
+        "SSD / HDD - Ổ cứng",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Kingston NV2 500GB thuộc nhóm SSD / HDD.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ssd-05",
+      "name": "Kingston KC3000 1TB",
+      "brand": "Kingston",
+      "category": "ssd",
+      "price": 2090000,
+      "oldPrice": 2090000,
+      "stock": 26,
+      "image": "/images/ssd-samsung.webp",
+      "specs": [
+        "SSD / HDD - Ổ cứng",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Kingston KC3000 1TB thuộc nhóm SSD / HDD.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ssd-06",
+      "name": "WD Blue SN580 1TB",
+      "brand": "WD",
+      "category": "ssd",
+      "price": 2440000,
+      "oldPrice": 2440000,
+      "stock": 30,
+      "image": "/images/ssd-samsung.webp",
+      "specs": [
+        "SSD / HDD - Ổ cứng",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "WD Blue SN580 1TB thuộc nhóm SSD / HDD.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ssd-07",
+      "name": "WD Black SN850X 2TB",
+      "brand": "WD",
+      "category": "ssd",
+      "price": 2790000,
+      "oldPrice": 3090000,
+      "stock": 3,
+      "image": "/images/ssd-samsung.webp",
+      "specs": [
+        "SSD / HDD - Ổ cứng",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "WD Black SN850X 2TB thuộc nhóm SSD / HDD.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-ssd-08",
+      "name": "Crucial P3 Plus 1TB",
+      "brand": "Crucial",
+      "category": "ssd",
+      "price": 3140000,
+      "oldPrice": 3140000,
+      "stock": 0,
+      "image": "/images/ssd-samsung.webp",
+      "specs": [
+        "SSD / HDD - Ổ cứng",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Crucial P3 Plus 1TB thuộc nhóm SSD / HDD.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-psu-01",
+      "name": "Corsair CX550 550W",
+      "brand": "Corsair",
+      "category": "psu",
+      "price": 890000,
+      "oldPrice": 1190000,
+      "stock": 10,
+      "image": "/images/psu.webp",
+      "specs": [
+        "Nguồn máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "Corsair CX550 550W thuộc nhóm Nguồn / PSU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-psu-02",
+      "name": "Corsair RM650 650W",
+      "brand": "Corsair",
+      "category": "psu",
+      "price": 1190000,
+      "oldPrice": 1190000,
+      "stock": 14,
+      "image": "/images/psu.webp",
+      "specs": [
+        "Nguồn máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Corsair RM650 650W thuộc nhóm Nguồn / PSU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-psu-03",
+      "name": "Corsair RM850e 850W",
+      "brand": "Corsair",
+      "category": "psu",
+      "price": 1490000,
+      "oldPrice": 1490000,
+      "stock": 18,
+      "image": "/images/psu.webp",
+      "specs": [
+        "Nguồn máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Corsair RM850e 850W thuộc nhóm Nguồn / PSU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-psu-04",
+      "name": "Cooler Master MWE Bronze 650W",
+      "brand": "Cooler Master",
+      "category": "psu",
+      "price": 1790000,
+      "oldPrice": 2090000,
+      "stock": 22,
+      "image": "/images/psu.webp",
+      "specs": [
+        "Nguồn máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Cooler Master MWE Bronze 650W thuộc nhóm Nguồn / PSU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-psu-05",
+      "name": "Cooler Master MWE Gold 750W",
+      "brand": "Cooler Master",
+      "category": "psu",
+      "price": 2090000,
+      "oldPrice": 2090000,
+      "stock": 26,
+      "image": "/images/psu.webp",
+      "specs": [
+        "Nguồn máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Cooler Master MWE Gold 750W thuộc nhóm Nguồn / PSU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-psu-06",
+      "name": "MSI MAG A650BN 650W",
+      "brand": "MSI",
+      "category": "psu",
+      "price": 2390000,
+      "oldPrice": 2390000,
+      "stock": 30,
+      "image": "/images/psu.webp",
+      "specs": [
+        "Nguồn máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "MSI MAG A650BN 650W thuộc nhóm Nguồn / PSU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-psu-07",
+      "name": "MSI MPG A850G PCIE5 850W",
+      "brand": "MSI",
+      "category": "psu",
+      "price": 2690000,
+      "oldPrice": 2990000,
+      "stock": 3,
+      "image": "/images/psu.webp",
+      "specs": [
+        "Nguồn máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "MSI MPG A850G PCIE5 850W thuộc nhóm Nguồn / PSU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-psu-08",
+      "name": "Seasonic FOCUS GX-750 750W",
+      "brand": "Seasonic",
+      "category": "psu",
+      "price": 2990000,
+      "oldPrice": 2990000,
+      "stock": 0,
+      "image": "/images/psu.webp",
+      "specs": [
+        "Nguồn máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Seasonic FOCUS GX-750 750W thuộc nhóm Nguồn / PSU.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-case-01",
+      "name": "NZXT H5 Flow White",
+      "brand": "NZXT",
+      "category": "case",
+      "price": 790000,
+      "oldPrice": 1090000,
+      "stock": 10,
+      "image": "/images/case.webp",
+      "specs": [
+        "Case - Vỏ máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "NZXT H5 Flow White thuộc nhóm Case PC.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-case-02",
+      "name": "NZXT H6 Flow Black",
+      "brand": "NZXT",
+      "category": "case",
+      "price": 1040000,
+      "oldPrice": 1040000,
+      "stock": 14,
+      "image": "/images/case.webp",
+      "specs": [
+        "Case - Vỏ máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "NZXT H6 Flow Black thuộc nhóm Case PC.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-case-03",
+      "name": "Corsair 4000D Airflow Black",
+      "brand": "Corsair",
+      "category": "case",
+      "price": 1290000,
+      "oldPrice": 1290000,
+      "stock": 18,
+      "image": "/images/case.webp",
+      "specs": [
+        "Case - Vỏ máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Corsair 4000D Airflow Black thuộc nhóm Case PC.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-case-04",
+      "name": "Corsair 4000D Airflow White",
+      "brand": "Corsair",
+      "category": "case",
+      "price": 1540000,
+      "oldPrice": 1840000,
+      "stock": 22,
+      "image": "/images/case.webp",
+      "specs": [
+        "Case - Vỏ máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Corsair 4000D Airflow White thuộc nhóm Case PC.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-case-05",
+      "name": "Cooler Master MasterBox Q300L",
+      "brand": "Cooler Master",
+      "category": "case",
+      "price": 1790000,
+      "oldPrice": 1790000,
+      "stock": 26,
+      "image": "/images/case.webp",
+      "specs": [
+        "Case - Vỏ máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Cooler Master MasterBox Q300L thuộc nhóm Case PC.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-case-06",
+      "name": "Cooler Master TD500 Mesh V2",
+      "brand": "Cooler Master",
+      "category": "case",
+      "price": 2040000,
+      "oldPrice": 2040000,
+      "stock": 30,
+      "image": "/images/case.webp",
+      "specs": [
+        "Case - Vỏ máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Cooler Master TD500 Mesh V2 thuộc nhóm Case PC.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-case-07",
+      "name": "DeepCool CH370 Black",
+      "brand": "DeepCool",
+      "category": "case",
+      "price": 2290000,
+      "oldPrice": 2590000,
+      "stock": 3,
+      "image": "/images/case.webp",
+      "specs": [
+        "Case - Vỏ máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "DeepCool CH370 Black thuộc nhóm Case PC.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-case-08",
+      "name": "MSI MAG FORGE 100R",
+      "brand": "MSI",
+      "category": "case",
+      "price": 2540000,
+      "oldPrice": 2540000,
+      "stock": 0,
+      "image": "/images/case.webp",
+      "specs": [
+        "Case - Vỏ máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "MSI MAG FORGE 100R thuộc nhóm Case PC.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cooling-01",
+      "name": "DeepCool AK400",
+      "brand": "DeepCool",
+      "category": "cooling",
+      "price": 390000,
+      "oldPrice": 690000,
+      "stock": 10,
+      "image": "/images/cooler.webp",
+      "specs": [
+        "Tản nhiệt máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "DeepCool AK400 thuộc nhóm Tản nhiệt.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cooling-02",
+      "name": "DeepCool AK620",
+      "brand": "DeepCool",
+      "category": "cooling",
+      "price": 840000,
+      "oldPrice": 840000,
+      "stock": 14,
+      "image": "/images/cooler.webp",
+      "specs": [
+        "Tản nhiệt máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "DeepCool AK620 thuộc nhóm Tản nhiệt.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cooling-03",
+      "name": "DeepCool LE520 240mm",
+      "brand": "DeepCool",
+      "category": "cooling",
+      "price": 1290000,
+      "oldPrice": 1290000,
+      "stock": 18,
+      "image": "/images/cooler.webp",
+      "specs": [
+        "Tản nhiệt máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "DeepCool LE520 240mm thuộc nhóm Tản nhiệt.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cooling-04",
+      "name": "Thermalright Peerless Assassin 120 SE",
+      "brand": "Thermalright",
+      "category": "cooling",
+      "price": 1740000,
+      "oldPrice": 2040000,
+      "stock": 22,
+      "image": "/images/cooler.webp",
+      "specs": [
+        "Tản nhiệt máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Thermalright Peerless Assassin 120 SE thuộc nhóm Tản nhiệt.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cooling-05",
+      "name": "Cooler Master Hyper 212 Halo",
+      "brand": "Cooler Master",
+      "category": "cooling",
+      "price": 2190000,
+      "oldPrice": 2190000,
+      "stock": 26,
+      "image": "/images/cooler.webp",
+      "specs": [
+        "Tản nhiệt máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Cooler Master Hyper 212 Halo thuộc nhóm Tản nhiệt.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cooling-06",
+      "name": "Cooler Master MasterLiquid 360L Core",
+      "brand": "Cooler Master",
+      "category": "cooling",
+      "price": 2640000,
+      "oldPrice": 2640000,
+      "stock": 30,
+      "image": "/images/cooler.webp",
+      "specs": [
+        "Tản nhiệt máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Cooler Master MasterLiquid 360L Core thuộc nhóm Tản nhiệt.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cooling-07",
+      "name": "NZXT Kraken 240",
+      "brand": "NZXT",
+      "category": "cooling",
+      "price": 3090000,
+      "oldPrice": 3390000,
+      "stock": 3,
+      "image": "/images/cooler.webp",
+      "specs": [
+        "Tản nhiệt máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "NZXT Kraken 240 thuộc nhóm Tản nhiệt.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-cooling-08",
+      "name": "Corsair iCUE H100i Elite Capellix XT",
+      "brand": "Corsair",
+      "category": "cooling",
+      "price": 3540000,
+      "oldPrice": 3540000,
+      "stock": 0,
+      "image": "/images/cooler.webp",
+      "specs": [
+        "Tản nhiệt máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Corsair iCUE H100i Elite Capellix XT thuộc nhóm Tản nhiệt.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-monitor-01",
+      "name": "ASUS ProArt PA248QV 24 inch",
+      "brand": "ASUS",
+      "category": "monitor",
+      "price": 2490000,
+      "oldPrice": 2790000,
+      "stock": 10,
+      "image": "/images/monitor-asus.webp",
+      "specs": [
+        "Màn hình máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "ASUS ProArt PA248QV 24 inch thuộc nhóm Màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-monitor-02",
+      "name": "ASUS TUF Gaming VG27AQ 27 inch",
+      "brand": "ASUS",
+      "category": "monitor",
+      "price": 3190000,
+      "oldPrice": 3190000,
+      "stock": 14,
+      "image": "/images/monitor-asus.webp",
+      "specs": [
+        "Màn hình máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "ASUS TUF Gaming VG27AQ 27 inch thuộc nhóm Màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-monitor-03",
+      "name": "LG UltraGear 24GN60R 24 inch",
+      "brand": "LG",
+      "category": "monitor",
+      "price": 3890000,
+      "oldPrice": 3890000,
+      "stock": 18,
+      "image": "/images/monitor-asus.webp",
+      "specs": [
+        "Màn hình máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "LG UltraGear 24GN60R 24 inch thuộc nhóm Màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-monitor-04",
+      "name": "LG UltraGear 27GP850 27 inch",
+      "brand": "LG",
+      "category": "monitor",
+      "price": 4590000,
+      "oldPrice": 4890000,
+      "stock": 22,
+      "image": "/images/monitor-asus.webp",
+      "specs": [
+        "Màn hình máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "LG UltraGear 27GP850 27 inch thuộc nhóm Màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-monitor-05",
+      "name": "Dell P2422H 24 inch",
+      "brand": "Dell",
+      "category": "monitor",
+      "price": 5290000,
+      "oldPrice": 5290000,
+      "stock": 26,
+      "image": "/images/monitor-asus.webp",
+      "specs": [
+        "Màn hình máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Dell P2422H 24 inch thuộc nhóm Màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-monitor-06",
+      "name": "Dell S2722QC 27 inch",
+      "brand": "Dell",
+      "category": "monitor",
+      "price": 5990000,
+      "oldPrice": 5990000,
+      "stock": 30,
+      "image": "/images/monitor-asus.webp",
+      "specs": [
+        "Màn hình máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Dell S2722QC 27 inch thuộc nhóm Màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-monitor-07",
+      "name": "MSI G244F E2 24 inch",
+      "brand": "MSI",
+      "category": "monitor",
+      "price": 6690000,
+      "oldPrice": 6990000,
+      "stock": 3,
+      "image": "/images/monitor-asus.webp",
+      "specs": [
+        "Màn hình máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "MSI G244F E2 24 inch thuộc nhóm Màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-monitor-08",
+      "name": "Gigabyte M27Q 27 inch",
+      "brand": "Gigabyte",
+      "category": "monitor",
+      "price": 7390000,
+      "oldPrice": 7390000,
+      "stock": 0,
+      "image": "/images/monitor-asus.webp",
+      "specs": [
+        "Màn hình máy tính",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Gigabyte M27Q 27 inch thuộc nhóm Màn hình.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-accessories-01",
+      "name": "Logitech G304 Lightspeed",
+      "brand": "Logitech",
+      "category": "accessories",
+      "price": 290000,
+      "oldPrice": 590000,
+      "stock": 10,
+      "image": "/images/keyboard.webp",
+      "specs": [
+        "Bàn phím, chuột & phụ kiện",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "Logitech G304 Lightspeed thuộc nhóm Phụ kiện.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-accessories-02",
+      "name": "Logitech G Pro X Superlight",
+      "brand": "Logitech",
+      "category": "accessories",
+      "price": 690000,
+      "oldPrice": 690000,
+      "stock": 14,
+      "image": "/images/keyboard.webp",
+      "specs": [
+        "Bàn phím, chuột & phụ kiện",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Logitech G Pro X Superlight thuộc nhóm Phụ kiện.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-accessories-03",
+      "name": "Logitech MX Master 3S",
+      "brand": "Logitech",
+      "category": "accessories",
+      "price": 1090000,
+      "oldPrice": 1090000,
+      "stock": 18,
+      "image": "/images/keyboard.webp",
+      "specs": [
+        "Bàn phím, chuột & phụ kiện",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Logitech MX Master 3S thuộc nhóm Phụ kiện.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-accessories-04",
+      "name": "Razer DeathAdder V2",
+      "brand": "Razer",
+      "category": "accessories",
+      "price": 1490000,
+      "oldPrice": 1790000,
+      "stock": 22,
+      "image": "/images/keyboard.webp",
+      "specs": [
+        "Bàn phím, chuột & phụ kiện",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Razer DeathAdder V2 thuộc nhóm Phụ kiện.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-accessories-05",
+      "name": "Razer BlackWidow V3",
+      "brand": "Razer",
+      "category": "accessories",
+      "price": 1890000,
+      "oldPrice": 1890000,
+      "stock": 26,
+      "image": "/images/keyboard.webp",
+      "specs": [
+        "Bàn phím, chuột & phụ kiện",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Razer BlackWidow V3 thuộc nhóm Phụ kiện.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-accessories-06",
+      "name": "Keychron K2",
+      "brand": "Keychron",
+      "category": "accessories",
+      "price": 2290000,
+      "oldPrice": 2290000,
+      "stock": 30,
+      "image": "/images/keyboard.webp",
+      "specs": [
+        "Bàn phím, chuột & phụ kiện",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "Keychron K2 thuộc nhóm Phụ kiện.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-accessories-07",
+      "name": "HyperX Cloud II",
+      "brand": "HyperX",
+      "category": "accessories",
+      "price": 2690000,
+      "oldPrice": 2990000,
+      "stock": 3,
+      "image": "/images/keyboard.webp",
+      "specs": [
+        "Bàn phím, chuột & phụ kiện",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "HyperX Cloud II thuộc nhóm Phụ kiện.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-accessories-08",
+      "name": "SteelSeries QcK Large",
+      "brand": "SteelSeries",
+      "category": "accessories",
+      "price": 3090000,
+      "oldPrice": 3090000,
+      "stock": 0,
+      "image": "/images/keyboard.webp",
+      "specs": [
+        "Bàn phím, chuột & phụ kiện",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "SteelSeries QcK Large thuộc nhóm Phụ kiện.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-pc-01",
+      "name": "TechZone Office Essential",
+      "brand": "TechZone",
+      "category": "pc",
+      "price": 6990000,
+      "oldPrice": 7290000,
+      "stock": 10,
+      "image": "/images/pc-gaming.webp",
+      "specs": [
+        "PC Gaming & Workstation",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": true,
+      "description": "TechZone Office Essential thuộc nhóm PC Gaming.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-pc-02",
+      "name": "TechZone Office Plus",
+      "brand": "TechZone",
+      "category": "pc",
+      "price": 9990000,
+      "oldPrice": 9990000,
+      "stock": 14,
+      "image": "/images/pc-gaming.webp",
+      "specs": [
+        "PC Gaming & Workstation",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "TechZone Office Plus thuộc nhóm PC Gaming.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-pc-03",
+      "name": "TechZone Study Compact",
+      "brand": "TechZone",
+      "category": "pc",
+      "price": 12990000,
+      "oldPrice": 12990000,
+      "stock": 18,
+      "image": "/images/pc-gaming.webp",
+      "specs": [
+        "PC Gaming & Workstation",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "TechZone Study Compact thuộc nhóm PC Gaming.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-pc-04",
+      "name": "TechZone Gaming Entry",
+      "brand": "TechZone",
+      "category": "pc",
+      "price": 15990000,
+      "oldPrice": 16290000,
+      "stock": 22,
+      "image": "/images/pc-gaming.webp",
+      "specs": [
+        "PC Gaming & Workstation",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "TechZone Gaming Entry thuộc nhóm PC Gaming.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-pc-05",
+      "name": "TechZone Gaming Performance",
+      "brand": "TechZone",
+      "category": "pc",
+      "price": 18990000,
+      "oldPrice": 18990000,
+      "stock": 26,
+      "image": "/images/pc-gaming.webp",
+      "specs": [
+        "PC Gaming & Workstation",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "TechZone Gaming Performance thuộc nhóm PC Gaming.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-pc-06",
+      "name": "TechZone Gaming Ultra",
+      "brand": "TechZone",
+      "category": "pc",
+      "price": 21990000,
+      "oldPrice": 21990000,
+      "stock": 30,
+      "image": "/images/pc-gaming.webp",
+      "specs": [
+        "PC Gaming & Workstation",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "TechZone Gaming Ultra thuộc nhóm PC Gaming.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-pc-07",
+      "name": "TechZone Creator Studio",
+      "brand": "TechZone",
+      "category": "pc",
+      "price": 24990000,
+      "oldPrice": 25290000,
+      "stock": 3,
+      "image": "/images/pc-gaming.webp",
+      "specs": [
+        "PC Gaming & Workstation",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "TechZone Creator Studio thuộc nhóm PC Gaming.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
+    },
+    {
+      "id": "seed-pc-08",
+      "name": "TechZone Workstation Pro",
+      "brand": "TechZone",
+      "category": "pc",
+      "price": 27990000,
+      "oldPrice": 27990000,
+      "stock": 0,
+      "image": "/images/pc-gaming.webp",
+      "specs": [
+        "PC Gaming & Workstation",
+        "Dữ liệu mẫu phục vụ kiểm tra cửa hàng"
+      ],
+      "featured": false,
+      "description": "TechZone Workstation Pro thuộc nhóm PC Gaming.\n\nDữ liệu được tạo để thử nghiệm danh sách, tìm kiếm, giỏ hàng và quản trị sản phẩm TechZone. Giá, tồn kho và ảnh là dữ liệu minh họa, không phải báo giá hoặc xác nhận thông số của nhà sản xuất. Cần cập nhật thông tin chính thức trước khi bán thực tế."
     }
   ],
   "content": {
@@ -289,6 +1697,24 @@
         "image": "/images/news-3.jpg",
         "status": "published",
         "createdAt": "2026-05-18T09:00:00.000Z"
+      },
+      {
+        "id": "article-seed-upgrade",
+        "title": "Chuẩn bị gì trước khi nâng cấp máy tính?",
+        "extra": "Kiến thức công nghệ",
+        "image": "/images/news-2.jpg",
+        "body": "Nâng cấp máy tính nên bắt đầu bằng việc xác định nhu cầu: học tập, làm việc, chơi game hay sáng tạo nội dung. Ghi lại các tác vụ thường dùng và vấn đề đang gặp để lựa chọn linh kiện phù hợp.\n\nKiểm tra cấu hình hiện tại, socket CPU, loại RAM, khe lưu trữ, công suất nguồn và kích thước case. Không chọn linh kiện chỉ dựa vào tên thương hiệu hoặc hình ảnh.\n\nSao lưu dữ liệu quan trọng trước khi thao tác. Tắt máy, ngắt nguồn và đọc hướng dẫn của thiết bị. Khi chưa chắc chắn về khả năng tương thích, hãy cung cấp cấu hình cho kỹ thuật viên để được kiểm tra.\n\nSau khi lắp đặt, kiểm tra nhiệt độ, khả năng nhận linh kiện và độ ổn định qua các tác vụ thường ngày. Đây là nội dung mẫu để kiểm tra trang tin của TechZone.",
+        "status": "published",
+        "createdAt": "2026-11-24T00:00:00Z"
+      },
+      {
+        "id": "article-seed-desk",
+        "title": "Sắp xếp góc làm việc gọn gàng với phụ kiện phù hợp",
+        "extra": "Tư vấn cấu hình",
+        "image": "/images/news-3.jpg",
+        "body": "Một góc làm việc thuận tiện cần đủ không gian cho màn hình, bàn phím, chuột và tài liệu. Đặt các thiết bị thường dùng trong tầm với và tránh che các khe thông gió của máy tính.\n\nĐi dây dọc mép bàn bằng dây buộc phù hợp. Chừa khoảng trống cho đầu kết nối để có thể di chuyển thiết bị mà không kéo căng cáp.\n\nKhi chọn bàn phím và chuột, cân nhắc kích thước bàn, cảm giác sử dụng và nhu cầu kết nối. Đèn trang trí là yếu tố tùy chọn; ưu tiên sự thoải mái và ánh sáng phù hợp với công việc.\n\nVệ sinh định kỳ theo hướng dẫn của nhà sản xuất. Nội dung này là bài viết mẫu phục vụ kiểm tra giao diện tin tức và tìm kiếm trên TechZone.",
+        "status": "published",
+        "createdAt": "2026-11-24T00:00:00Z"
       }
     ],
     "comments": [],

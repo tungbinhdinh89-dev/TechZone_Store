@@ -2,6 +2,8 @@ import { useState, type CSSProperties } from "react"
 import { useRemoteList } from "./useRemoteData"
 import RemotePager from "./RemotePager"
 import PasswordForm from "./PasswordForm"
+import CategoryAdmin from "./CategoryAdmin"
+import { Table, TableHeader, TableBody, TableRow, TableCell } from "./tailadmin/Table"
 import {
   Button,
   IconButton,
@@ -53,7 +55,7 @@ import {
 import { Empty, go, ProductImage, Title, categoryName } from "./ui"
 import { OrderCard } from "./StorePages"
 
-type Section = "dashboard" | "products" | "orders" | "users" | CmsGroup
+type Section = "dashboard" | "products" | "categories" | "orders" | "users" | CmsGroup
 const contentIcons = {
   articles: FileText,
   comments: MessageCircle,
@@ -316,16 +318,19 @@ function Dashboard({ navigate }: { navigate: (s: Section) => void }) {
 }
 function Products() {
   const { db, act, busy } = useShop()
-  const categories = db.categories
+  const categoryList = useRemoteList<{id: number; slug: string; name: string}>("categories", {admin:1,perPage:100})
+  const categories = categoryList.items.length ? categoryList.items.map(c => ({ id:c.slug,short:c.name })) : db.categories
   const [page, setPage] = useState(1)
   const [query, setQuery] = useState("")
   const [category, setCategory] = useState("")
+  const [status, setStatus] = useState("")
   const [editing, setEditing] = useState<Product | null>(null)
   const [deleting, setDeleting] = useState<Product | null>(null)
   const remote = useRemoteList<Product>("products", {
     admin: 1,
     q: query,
     category,
+    status,
     page,
   })
   const products = remote.items
@@ -363,26 +368,18 @@ function Products() {
           />
           <SelectField
             value={category}
-            onChange={setCategory}
+            onChange={(value) => { setCategory(value); setPage(1) }}
             options={[
               { value: "", label: "Tất cả danh mục" },
               ...categories.map((c) => ({ value: c.id, label: c.short })),
             ]}
           />
+          <SelectField aria-label="Lọc trạng thái sản phẩm" value={status} onChange={(value) => { setStatus(value); setPage(1) }} options={[{value:"",label:"Đang quản lý"},{value:"active",label:"Đang bán"},{value:"hidden",label:"Đang ẩn"},{value:"discontinued",label:"Ngừng bán / đã xóa"}]} />
         </div>
         <div className="table-scroll">
-          <table className="data-table">
-            <thead>
-              <tr>
-                <th>Sản phẩm</th>
-                <th>Danh mục</th>
-                <th>Giá bán</th>
-                <th>Tồn kho</th>
-                <th>Nổi bật</th>
-                <th>Thao tác</th>
-              </tr>
-            </thead>
-            <tbody>
+          <Table className="data-table">
+            <TableHeader><TableRow>{["Sản phẩm", "Danh mục", "Giá bán", "Tồn kho", "Trạng thái", "Thao tác"].map(label => <TableCell key={label} isHeader>{label}</TableCell>)}</TableRow></TableHeader>
+            <TableBody>
               {products.map((p) => (
                 <tr key={p.id}>
                   <td>
@@ -391,12 +388,12 @@ function Products() {
                       <div>
                         <strong>{p.name}</strong>
                         <small>
-                          {p.brand} · {p.id}
+                          {p.brand} · {p.sku || p.id}
                         </small>
                       </div>
                     </div>
                   </td>
-                  <td>{categoryName(p.category)}</td>
+                  <td>{categories.find(c => c.id === p.category)?.short ?? categoryName(p.category)}</td>
                   <td>
                     <strong>{money(p.price)}</strong>
                     <small>
@@ -411,7 +408,7 @@ function Products() {
                       }
                     />
                   </td>
-                  <td>{p.featured ? "Có" : "Không"}</td>
+                  <td><Badge label={p.status === "hidden" ? "Đang ẩn" : p.status === "discontinued" ? "Ngừng bán" : "Đang bán"} variant={p.status === "active" ? "success" : "secondary"} /></td>
                   <td>
                     <div className="flex gap-md">
                       <IconButton
@@ -430,9 +427,9 @@ function Products() {
                   </td>
                 </tr>
               ))}
-            </tbody>
-          </table>
-          {!products.length && (
+            </TableBody>
+          </Table>
+          {!products.length && !remote.loading && !remote.error && (
             <Empty
               title="Không tìm thấy sản phẩm"
               body="Hãy thay đổi từ khóa hoặc danh mục."
@@ -459,6 +456,7 @@ function Products() {
             onSubmit={(e) => {
               e.preventDefault()
               void act(async () => {
+                if (editing.name.trim().length < 2 || !editing.brand.trim() || !Number.isFinite(editing.price) || editing.price < 0 || !Number.isInteger(editing.stock) || editing.stock < 0) throw new Error("Kiểm tra tên, thương hiệu, giá và tồn kho hợp lệ.")
                 await api.saveProduct(editing)
                 setEditing(null)
               }, "Đã lưu sản phẩm.")
@@ -470,6 +468,12 @@ function Products() {
               value={editing.name}
               onChange={(v) => field("name", v)}
             />
+            <div className="form-two">
+              <InputField label="SKU" maxLength={80} value={editing.sku ?? ""} placeholder="Tự tạo nếu để trống" onChange={v => field("sku", v || undefined)} />
+              <InputField label="Slug đường dẫn" maxLength={220} value={editing.slug ?? ""} placeholder="Tự tạo nếu để trống" onChange={v => field("slug", v || undefined)} pattern="[a-z0-9]+(-[a-z0-9]+)*" />
+            </div>
+            <SelectField label="Trạng thái hiển thị" value={editing.status ?? "active"} onChange={v => field("status",v)} options={[{value:"active",label:"Đang bán"},{value:"hidden",label:"Ẩn khỏi cửa hàng"},{value:"discontinued",label:"Ngừng bán"}]} />
+            <TextareaField label="Mô tả sản phẩm" maxLength={20000} value={editing.description ?? ""} onChange={v => field("description",v)} />
             <div className="form-two">
               <InputField
                 label="Thương hiệu"
@@ -491,7 +495,8 @@ function Products() {
               <InputField
                 label="Giá bán (₫)"
                 type="number"
-                min={1}
+                min={0}
+                step={0.01}
                 required
                 value={String(editing.price)}
                 onChange={(v) => field("price", Number(v))}
@@ -500,6 +505,7 @@ function Products() {
                 label="Giá niêm yết (₫)"
                 type="number"
                 min={0}
+                step={0.01}
                 required
                 value={String(editing.oldPrice)}
                 onChange={(v) => field("oldPrice", Number(v))}
@@ -524,14 +530,26 @@ function Products() {
             <input
               aria-label="Tải ảnh sản phẩm"
               type="file"
+              multiple
               accept="image/jpeg,image/png,image/webp"
               disabled={busy}
               onChange={(event) => {
-                const file = event.target.files?.[0]
-                if (file)
-                  void act(async () => field("image", await api.upload(file)))
+                const files = Array.from(event.target.files ?? [])
+                if (files.length) void act(async () => {
+                  const images = [...(editing.images ?? (editing.image ? [editing.image] : []))]
+                  if (images.length + files.length > 12) throw new Error("Tối đa 12 ảnh sản phẩm.")
+                  for (const file of files) images.push(await api.upload(file))
+                  field("images", images)
+                  if (!editing.image) field("image", images[0])
+                })
               }}
             />
+            {editing.image && <img src={editing.image} alt="Xem trước ảnh sản phẩm" className="cms-image-preview" />}
+            <div className="cms-gallery">{(editing.images ?? (editing.image ? [editing.image] : [])).map(path => <div key={path}>
+              <img src={path} alt="Ảnh sản phẩm" />
+              <Button type="button" variant="subtle" onClick={() => field("image",path)}>{editing.image === path ? "Ảnh chính" : "Đặt làm ảnh chính"}</Button>
+              <Button type="button" variant="subtle" onClick={() => { const images = (editing.images ?? [editing.image]).filter(value => value !== path); field("images",images); if (editing.image === path) field("image",images[0] ?? "") }}>Bỏ ảnh</Button>
+            </div>)}</div>
             <TextareaField
               label="Thông số (mỗi dòng một thông số)"
               value={editing.specs.join("\n")}
@@ -584,8 +602,8 @@ function Products() {
       >
         <p>{deleting?.name}</p>
         <p className="muted">
-          Sản phẩm đang thuộc đơn xử lý sẽ không thể xóa. Lịch sử đơn hàng cũ
-          được giữ nguyên.
+          Sản phẩm sẽ chuyển sang ngừng bán và không còn hiển thị tại cửa hàng.
+          Lịch sử đơn hàng được giữ nguyên; có thể khôi phục trong bộ lọc Ngừng bán.
         </p>
       </Modal>
     </>
@@ -1138,19 +1156,17 @@ function CMS({ group }: { group: CmsGroup }) {
     </>
   )
 }
-export default function Admin() {
+export default function Admin({ route }: { route: string }) {
   const { db, user, setAuth, sync } = useShop()
-  const initial = window.location.hash.split("/")[2] as Section | undefined
-  const [section, setSection] = useState<Section>(
+  const initial = route.split("/")[2] as Section | undefined
+  const section: Section =
     initial &&
       (initial in cmsGroups ||
-        ["products", "orders", "users", "dashboard"].includes(initial))
+        ["products", "categories", "orders", "users", "dashboard"].includes(initial))
       ? initial
-      : "dashboard",
-  )
+      : "dashboard"
   const [menu, setMenu] = useState(false)
   function navigate(next: Section) {
-    setSection(next)
     window.location.hash = `/admin/${next}`
     setMenu(false)
     window.scrollTo(0, 0)
@@ -1195,6 +1211,7 @@ export default function Admin() {
         {[
           { id: "dashboard", label: "Tổng quan", icon: LayoutGrid },
           { id: "products", label: "Sản phẩm", icon: Package },
+          { id: "categories", label: "Danh mục", icon: LayoutGrid },
           { id: "orders", label: "Đơn hàng", icon: ShoppingCart },
           { id: "users", label: "Tài khoản", icon: Users },
         ].map(({ id, label, icon: Icon }) => (
@@ -1267,14 +1284,15 @@ export default function Admin() {
                 : {
                     dashboard: "Tổng quan",
                     products: "Sản phẩm",
+                    categories: "Danh mục",
                     orders: "Đơn hàng",
                     users: "Tài khoản",
                   }[(section as "dashboard")]}
             </strong>
           </div>
           <div className="admin-user">
-            <span className="admin-live">
-              <span /> Đã kết nối
+            <span className="admin-live" role="status">
+              <span /> {db.error ? "Cần kết nối lại" : "Đã kết nối"}
             </span>
             <div className="avatar-small">TZ</div>
             <div>
@@ -1288,6 +1306,8 @@ export default function Admin() {
             <Dashboard navigate={navigate} />
           ) : section === "products" ? (
             <Products />
+          ) : section === "categories" ? (
+            <CategoryAdmin />
           ) : section === "orders" ? (
             <Orders />
           ) : section === "users" ? (
@@ -1297,7 +1317,7 @@ export default function Admin() {
           )}
         </main>
         <div className="admin-bottom-note">
-          TechZone Admin · Dữ liệu được lưu và kiểm tra trên máy chủ
+          TechZone CMS · Thành phần bảng TailAdmin Free (MIT) · Dữ liệu được lưu trên máy chủ
         </div>
       </div>
     </div>

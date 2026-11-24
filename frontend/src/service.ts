@@ -328,6 +328,9 @@ export const api = {
     return mutate("admin-product-delete", { id })
   },
 
+  saveCategory(values: Record<string, unknown>) { return mutate("admin-category-save", values) },
+  deleteCategory(id: string) { return mutate("admin-category-delete", { id }) },
+
   toggleUser(id: string) {
     return mutate("admin-user-toggle", { id })
   },
